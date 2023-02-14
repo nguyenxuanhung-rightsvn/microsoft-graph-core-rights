@@ -5,7 +5,7 @@ require 'securerandom'
 require_relative '../graph_client_options'
 require_relative '../version_information'
 
-module MicrosoftGraphCore
+module MicrosoftGraphCoreRights
 	module Middleware
 		class TelemetryHandler < Faraday::Middleware
 			@@default_option = GraphClientOptions.new
@@ -42,7 +42,7 @@ module MicrosoftGraphCore
 				unless RbConfig::CONFIG["ruby_version"].nil? || RbConfig::CONFIG["ruby_version"].empty? then
 					feature_suffix += " runtimeEnvironment=" + RbConfig::CONFIG["ruby_version"] + ";"
 				end
-				return service_version_prefix + "graph-ruby-core/" + MicrosoftGraphCore::VersionInformation::VERSION + feature_suffix
+				return service_version_prefix + "graph-ruby-core/" + MicrosoftGraphCoreRights::VersionInformation::VERSION + feature_suffix
 			end
 		end
 	end

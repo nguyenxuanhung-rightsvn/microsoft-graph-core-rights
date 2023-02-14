@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require_relative 'lib/microsoft_graph_core/version_information'
+require_relative 'lib/microsoft_graph_core_rights/version_information'
 
 Gem::Specification.new do |spec|
-  spec.name          = "microsoft_graph_core"
-  spec.version       = MicrosoftGraphCore::VersionInformation::VERSION
+  spec.name          = "microsoft_graph_core_rights"
+  spec.version       = MicrosoftGraphCoreRights::VersionInformation::VERSION
   spec.authors       = 'Microsoft Corporation'
   spec.email         = 'graphsdkpub+ruby@microsoft.com'
 
@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'microsoft_kiota_abstractions', '~> 0.13.0', '>= 0.13.0'
-  spec.add_runtime_dependency 'microsoft_kiota_faraday', '>= 0.10', '< 0.12'
+  spec.add_runtime_dependency 'microsoft_kiota_faraday_rights'
   spec.add_runtime_dependency 'microsoft_kiota_serialization_json', '~> 0.8.0'
   spec.add_runtime_dependency 'microsoft_kiota_authentication_oauth', '>= 0.7', '< 0.8'
   spec.add_development_dependency 'rake', '~> 13.0'

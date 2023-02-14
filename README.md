@@ -12,7 +12,7 @@ Get started with the Microsoft Graph Core SDK for Ruby by integrating the [Micro
 
 ## 1. Installation
 
-run `gem install microsoft_graph_core` or include `gem microsoft_graph_core` in your gemfile.
+run `gem install microsoft_graph_core_rights` or include `gem microsoft_graph_core_rights` in your gemfile.
 
 ## 2. Getting started
 
@@ -30,11 +30,11 @@ For an example of how to get an authentication provider, see [choose a Microsoft
 
 ```Ruby
 require "microsoft_kiota_authentication_oauth"
-require "microsoft_graph_core"
+require "microsoft_graph_core_rights"
 
 context = MicrosoftKiotaAuthenticationOauth::ClientCredentialContext.new("<the tenant id from your app registration>", "<the client id from your app registration>", "<the client secret from your app registration>")
 
-authentication_provider = MicrosoftGraphCore::Authentication::OAuthAuthenticationProvider.new(context, nil, ["Files.Read"])
+authentication_provider = MicrosoftGraphCoreRights::Authentication::OAuthAuthenticationProvider.new(context, nil, ["Files.Read"])
 ```
 
 ### 2.3 Get a Graph Service Client and Adapter object

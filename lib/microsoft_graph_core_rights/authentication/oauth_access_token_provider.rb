@@ -1,5 +1,5 @@
 require 'microsoft_kiota_authentication_oauth'
-module MicrosoftGraphCore
+module MicrosoftGraphCoreRights
     module Authentication
         # Wrapper around the kiota access token provider with the Microsoft Graph defaults set up.
         class OAuthAccessTokenProvider < MicrosoftKiotaAuthenticationOAuth::OAuthAccessTokenProvider

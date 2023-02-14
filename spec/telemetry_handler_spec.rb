@@ -1,8 +1,8 @@
 require 'faraday'
 # frozen_string_literal: true
-RSpec.describe MicrosoftGraphCore do
+RSpec.describe MicrosoftGraphCoreRights do
     it "adds a client id" do
-		handler = MicrosoftGraphCore::Middleware::TelemetryHandler.new
+		handler = MicrosoftGraphCoreRights::Middleware::TelemetryHandler.new
 		env = {
 			url: URI.parse("https://graph.microsoft.com/v1.0/users"),
 			request_headers: Faraday::Utils::Headers.new
@@ -12,10 +12,10 @@ RSpec.describe MicrosoftGraphCore do
 	end
 
 	it "adds a service info" do
-		options = MicrosoftGraphCore::GraphClientOptions.new
+		options = MicrosoftGraphCoreRights::GraphClientOptions.new
 		options.graph_service_library_version = "1.0.0"
 		options.graph_service_version = "v1.0"
-		handler = MicrosoftGraphCore::Middleware::TelemetryHandler.new
+		handler = MicrosoftGraphCoreRights::Middleware::TelemetryHandler.new
 		env = {
 			url: URI.parse("https://graph.microsoft.com/v1.0/users"),
 			request_headers: Faraday::Utils::Headers.new,

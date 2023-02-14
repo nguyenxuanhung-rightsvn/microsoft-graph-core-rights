@@ -1,4 +1,4 @@
-module MicrosoftGraphCore
+module MicrosoftGraphCoreRights
 	class GraphClientOptions
 		include MicrosoftKiotaAbstractions::RequestOption
 		attr_accessor :graph_service_version, :graph_service_library_version
