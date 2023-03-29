@@ -33,7 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'microsoft_kiota_abstractions', '~> 0.13.0', '>= 0.13.0'
   spec.add_runtime_dependency 'microsoft_kiota_faraday_rights'
-  spec.add_runtime_dependency 'microsoft_kiota_serialization_json', '~> 0.8.0'
+  spec.add_runtime_dependency 'microsoft_kiota_serialization_json', '>= 0.8', '< 0.10'
   spec.add_runtime_dependency 'microsoft_kiota_authentication_oauth', '>= 0.7', '< 0.8'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency "rspec", "~> 3.0"
